@@ -1,14 +1,14 @@
-const withScope = require('express-jwt-authz')
+const withScope = require("express-jwt-authz");
 
-const BASE_OPTIONS = { checkAllScopes: true, failWithError: true }
+const BASE_OPTIONS = { checkAllScopes: true, failWithError: true };
 
 const SCOPES = {
   users: {
-    read: 'users:read',
-    write: 'users:write'
-  }
-}
+    read: "users:read",
+    write: "users:write",
+  },
+};
 
-const USERS_READ = withScope([SCOPES.users.read], BASE_OPTIONS)
+const USERS_READ = withScope([SCOPES.users.read], BASE_OPTIONS);
 
-module.exports = { USERS_READ }
+module.exports = { USERS_READ };

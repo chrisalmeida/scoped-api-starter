@@ -1,12 +1,12 @@
-const express = require('express'),
+const express = require("express"),
   router = express.Router(),
-  { USERS_READ } = require('../scopes')
+  { USERS_READ } = require("../scopes");
 
 /* List all users */
-router.get('/', USERS_READ, (req, res, next) => {
+router.get("/", USERS_READ, (req, res, next) => {
   res.json({
-    users: []
-  })
-})
+    users: [],
+  });
+});
 
-module.exports = router
+module.exports = router;
